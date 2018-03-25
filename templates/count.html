@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Words in {{count}} text</h1>
+
+	<form action="{% url 'about' %}">
+		<input type="submit" value="About this page" name="">
+	</form>
+	
+
+	<a href="{% url 'home' %}">Start again</a>
+
+	<h1>Your text:</h1>
+
+	{% for word, counttotal in sortedwords %}
+
+	{{ word }} - {{counttotal}}
+	<br />
+
+	{% endfor %}
+
+
+</body>
+</html>
